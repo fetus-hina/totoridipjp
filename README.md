@@ -23,4 +23,4 @@ var_dump($url); // string(62) "http://totoridipjp-cdn.c.sakurastorage.jp/imgs/to
 
 ## License
 
-MIT License
+[Unlicense](LICENSE) a.k.a. public domain
