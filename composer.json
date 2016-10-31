@@ -1,0 +1,21 @@
+{
+    "name": "jp3cki/totoridipjp",
+    "description": "イワシがいっぱいだあ…ちょっとだけもらっていこうかな",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "AIZAWA Hina",
+            "email": "hina@bouhime.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5",
+        "php-curl-class/php-curl-class": "^7.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "jp3cki\\totoridipjp\\": "src"
+        }
+    }
+}
