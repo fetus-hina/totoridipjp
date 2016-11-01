@@ -23,6 +23,7 @@ class Totori
         if ($key === 'イワシ') {
             return $this->getIwashi();
         }
+        return null;
     }
 
     public function __toString()
@@ -36,7 +37,9 @@ class Totori
         $curl->setUserAgent($this->userAgent);
         $curl->get($this->endPoint);
         if ($curl->error) {
+            // @codeCoverageIgnoreStart
             throw new Exception($curl->errorMessage, $curl->errorCode);
+            // @codeCoverageIgnoreEnd
         }
         $resp = new ApiResponse($curl->rawResponse);
         return $resp->getUrl();
