@@ -12,6 +12,13 @@ settings:
 extensions:
     enabled:
         - Codeception\Extension\RunFailed
+        - Codeception\Extension\PhpBuiltinServer
+    config:
+        Codeception\Extension\PhpBuiltinServer:
+            hostname: localhost
+            port: 9821
+            documentRoot: tests/_stub/
+            startDelay: 0
 modules:
     config:
         Db:

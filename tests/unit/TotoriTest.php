@@ -8,8 +8,12 @@ class TotoriTest extends \Codeception\Test\Unit
      */
     protected $tester;
 
+    protected $totori;
+
     protected function _before()
     {
+        $this->totori = new Totori();
+        $this->totori->endPoint = 'http://localhost:9821/api.php';
     }
 
     protected function _after()
@@ -21,26 +25,23 @@ class TotoriTest extends \Codeception\Test\Unit
     {
         $this->assertEquals(
             'イワシがいっぱいだあ…ちょっとだけもらっていこうかな',
-            (string)(new Totori())
+            (string)$this->totori
         );
     }
 
     public function testGetIwashi()
     {
-        $obj = new Totori();
-        $this->assertRegExp('/^https?:\/\/[-_.!~*\'()a-zA-Z0-9;\/?:@&=+$,%#]+$/', $obj->getIwashi());
+        $this->assertRegExp('/^https?:\/\/[-_.!~*\'()a-zA-Z0-9;\/?:@&=+$,%#]+$/', $this->totori->getIwashi());
     }
 
     public function testPropertyIwashi()
     {
         $iwashi = 'イワシ';
-        $obj = new Totori();
-        $this->assertRegExp('/^https?:\/\/[-_.!~*\'()a-zA-Z0-9;\/?:@&=+$,%#]+$/', $obj->$iwashi);
+        $this->assertRegExp('/^https?:\/\/[-_.!~*\'()a-zA-Z0-9;\/?:@&=+$,%#]+$/', $this->totori->$iwashi);
     }
 
     public function testUnknownProperty()
     {
-        $obj = new Totori();
-        $this->assertNull($obj->hoge);
+        $this->assertNull($this->totori->hoge);
     }
 }
