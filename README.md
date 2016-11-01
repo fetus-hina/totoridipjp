@@ -32,15 +32,16 @@ License
 
 ### Source codes
 
-Dual licensed under the [NYSL-0.9982][NYSL] and [Unlicense][Unlicense] license.
+Dual licensed under the [NYSL-0.9982][^NYSL] and [Unlicense][^Unlicense] license.
 
 For details, visit websites and/or read the [LICENSE](LICENSE.md) file.
 
 ### Documents
 
-[CC0][CC0]
+CC0 ([English][^CC0EN], [Japanese][^CC0JA])
 
 
-[NYSL] http://www.kmonos.net/nysl/
-[Unlicense] http://unlicense.org/
-[CC0] https://creativecommons.org/publicdomain/zero/1.0/deed.en
+[^NYSL]: http://www.kmonos.net/nysl/
+[^Unlicense]: http://unlicense.org/
+[^CC0EN]: https://creativecommons.org/publicdomain/zero/1.0/deed.en
+[^CC0JA]: https://creativecommons.org/publicdomain/zero/1.0/deed.ja
