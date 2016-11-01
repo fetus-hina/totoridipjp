@@ -11,7 +11,7 @@ class Totori
     public function __construct()
     {
         $this->userAgent = sprintf(
-            '%s/%s (+%s)', 
+            '%s/%s (+%s)',
             'totoridipjp',
             Version::VERSION,
             Version::PROJ_URL

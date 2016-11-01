@@ -19,7 +19,8 @@
     "require-dev": {
         "codeception/codeception": "^2.2",
         "codeception/specify": "^0.4.5",
-        "codeception/phpbuiltinserver": "^1.2"
+        "codeception/phpbuiltinserver": "^1.2",
+        "squizlabs/php_codesniffer": "^2.7"
     },
     "autoload": {
         "psr-4": {
@@ -27,7 +28,9 @@
         }
     },
     "scripts": {
-        "test": "vendor/bin/codecept run",
-        "coverage": "vendor/bin/codecept run --coverage-xml --coverage-html"
+        "coverage": "vendor/bin/codecept run --coverage-xml --coverage-html",
+        "phpcbf": "vendor/bin/phpcbf --standard=PSR2 --encoding=UTF-8 src",
+        "phpcs": "vendor/bin/phpcs --standard=PSR2 --encoding=UTF-8 src",
+        "test": "vendor/bin/codecept run"
     }
 }
