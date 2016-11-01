@@ -20,5 +20,8 @@
         "psr-4": {
             "jp3cki\\totoridipjp\\": "src"
         }
+    },
+    "require-dev": {
+        "codeception/codeception": "^2.2"
     }
 }
