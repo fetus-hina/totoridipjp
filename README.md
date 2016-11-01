@@ -1,6 +1,11 @@
 Totoridipjp
 ===========
 
+[![Build Status](https://travis-ci.org/fetus-hina/totoridipjp.svg?branch=master)](https://travis-ci.org/fetus-hina/totoridipjp)
+![](https://img.shields.io/packagist/v/jp3cki/totoridipjp.svg)
+![](https://img.shields.io/badge/license-NYSL-blue.svg)
+![](https://img.shields.io/badge/license-Unlicense-blue.svg)
+
 http://totori.dip.jp/
 
 See also the [original project](https://github.com/toshia/totoridipjp-ruby).
