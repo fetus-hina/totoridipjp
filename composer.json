@@ -2,7 +2,10 @@
     "name": "jp3cki/totoridipjp",
     "description": "イワシがいっぱいだあ…ちょっとだけもらっていこうかな",
     "type": "library",
-    "license": "Unlicense",
+    "license": [
+        "Unlicense",
+        "NYSL-0.9982"
+    ],
     "authors": [
         {
             "name": "AIZAWA Hina",
