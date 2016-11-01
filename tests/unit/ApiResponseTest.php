@@ -5,8 +5,6 @@ use jp3cki\totoridipjp\TypeError;
 
 class ApiResponseTest extends \Codeception\Test\Unit
 {
-    use \Codeception\Specify;
-
     /**
      * @var \UnitTester
      */
@@ -28,14 +26,20 @@ class ApiResponseTest extends \Codeception\Test\Unit
 
     public function testConstruct2()
     {
-        $this->expectException('jp3cki\totoridipjp\TypeError');
-        $obj = new ApiResponse(null);
+        try {
+            $obj = new ApiResponse(null);
+            $this->fail();
+        } catch (TypeError $e) {
+        }
     }
 
     public function testConstruct3()
     {
-        $this->expectException('jp3cki\totoridipjp\TypeError');
-        $obj = new ApiResponse(42);
+        try {
+            $obj = new ApiResponse(42);
+            $this->fail();
+        } catch (TypeError $e) {
+        }
     }
 
     public function testGetUrl1()
@@ -49,9 +53,12 @@ class ApiResponseTest extends \Codeception\Test\Unit
 
     public function testGetUrl2()
     {
-        $this->expectException('jp3cki\totoridipjp\Exception');
         $obj = new ApiResponse('{"id":"topimg"}');
-        $obj->getUrl();
+        try {
+            $obj->getUrl();
+            $this->fail();
+        } catch (Exception $e) {
+        }
     }
 
     public function testGetJson()
@@ -65,15 +72,21 @@ class ApiResponseTest extends \Codeception\Test\Unit
 
     public function testWithBrokenJson1()
     {
-        $this->expectException('jp3cki\totoridipjp\Exception');
         $obj = new ApiResponse('{hoge}');
-        $obj->getUrl();
+        try {
+            $obj->getUrl();
+            $this->fail();
+        } catch (Exception $e) {
+        }
     }
 
     public function testWithBrokenJson2()
     {
-        $this->expectException('jp3cki\totoridipjp\Exception');
         $obj = new ApiResponse('[]');
-        $obj->getUrl();
+        try {
+            $obj->getUrl();
+            $this->fail();
+        } catch (Exception $e) {
+        }
     }
 }
