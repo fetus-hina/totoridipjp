@@ -1,6 +1,7 @@
 LICENSE
 =======
 
+Dual licensed under the NYSL-0.9982 and the Unlicense license.
 
 NYSL (Version 0.9982)
 ---------------------
