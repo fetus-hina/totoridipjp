@@ -6,6 +6,17 @@ use Curl\Curl;
 class Totori
 {
     public $endPoint = 'http://totori.dip.jp/api/topimg/?format=json';
+    public $userAgent;
+
+    public function __construct()
+    {
+        $this->userAgent = sprintf(
+            '%s/%s (+%s)', 
+            'totoridipjp',
+            Version::VERSION,
+            Version::PROJ_URL
+        );
+    }
 
     public function __get($key)
     {
@@ -22,14 +33,12 @@ class Totori
     public function getIwashi()
     {
         $curl = new Curl();
+        $curl->setUserAgent($this->userAgent);
         $curl->get($this->endPoint);
         if ($curl->error) {
             throw new Exception($curl->errorMessage, $curl->errorCode);
         }
-        $json = $curl->response;
-        if (is_object($json) && isset($json->url)) {
-            return $json->url;
-        }
-        throw new Exception('Invalid response');
+        $resp = new ApiResponse($curl->rawResponse);
+        return $resp->getUrl();
     }
 }
